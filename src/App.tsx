@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+
+// Need to remove tsx extension from here, find out why
 import Header from './components/ui/header'
 
 function App() {

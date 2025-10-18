@@ -1,10 +1,8 @@
 import './App.css';
 import AccountProvider from './providers/account/AccountProvider'
-// Need to remove tsx extension from here, find out why
-// Update - when everything is named as tsx it is no longer needed
-// keeping this comment here for future reference
 import Header from './components/ui/header'
 import TaskProvider from './providers/tasks/TaskProvider';
+import TaskContainer from './components/taskContainer';
 
 function App() {
   return (
@@ -12,6 +10,7 @@ function App() {
       <AccountProvider>
         <TaskProvider>
           <Header />
+          <TaskContainer />
         </TaskProvider>
       </AccountProvider>
     </div>

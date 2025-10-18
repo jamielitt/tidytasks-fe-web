@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Compiling Tailwind
+
+This applicaiton uses Tailwind for its styling, To compile into app:
+`npx @tailwindcss/cli -i ./src/app.css -o ./src/main.css --watch`
+
+`app.css` being the source to compile and
+`main.css` this is the output file - it's included  in App.tsx
+The `--watch` parameter keeps it running so you can change and it will auto compile when changes are saved

@@ -1,4 +1,4 @@
-import './App.css';
+import './main.css';
 import AccountProvider from './providers/account/AccountProvider'
 import Header from './components/ui/header'
 import TaskProvider from './providers/tasks/TaskProvider';

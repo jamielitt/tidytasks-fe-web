@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Props } from "../../components/ui/interfaces/propsWithChildren";
 import { TaskContext, defaultTasks, useTaskProvider } from "./useTaskProvider";
 

@@ -1,4 +1,5 @@
 import { task, tasks } from "../../models/tasks";
+import { Task } from "../../providers/tasks/useTaskProvider";
 
 export default function useTasks()
 {
@@ -9,11 +10,13 @@ export default function useTasks()
     }
 
     listOfTasks.taskList.push({
+        id: "1",
         name: "First Task",
         description: "This is the first task"
     })
 
-        listOfTasks.taskList.push({
+    listOfTasks.taskList.push({
+        id: "2",
         name: "Second Task",
         description: "This is the second task"
     })

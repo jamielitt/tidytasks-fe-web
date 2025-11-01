@@ -1,5 +1,5 @@
-import { task } from "../models/tasks";
-import { Task } from "../providers/tasks/useTaskProvider";
+import { task } from "../../../models/tasks";
+import { Task } from "../../../providers/tasks/useTaskProvider";
 
 type TaskListProps = {
   taskList: Array<task>,

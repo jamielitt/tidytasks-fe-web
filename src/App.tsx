@@ -2,7 +2,7 @@ import './main.css';
 import AccountProvider from './providers/account/AccountProvider'
 import Header from './components/ui/header'
 import TaskProvider from './providers/tasks/TaskProvider';
-import TaskContainer from './components/taskContainer';
+import UISurface from './components/ui/uiSurface';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <AccountProvider>
         <TaskProvider>
           <Header />
-          <TaskContainer />
+          <UISurface />
         </TaskProvider>
       </AccountProvider>
     </div>

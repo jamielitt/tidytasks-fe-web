@@ -1,9 +1,10 @@
 import useTasks from "../../../hooks/tasks/useTasks";
+import useUiSurface from "../../../hooks/uiSurface/useUiSurface";
 import { uiSurfaceProps } from "../interfaces/surfaceProps";
 import { basicContainerStyle } from "../styles/base";
 import { TaskList } from "./taskList";
 
-export default function TaskContainer({ onDashboardClick }: uiSurfaceProps) {
+export default function TaskContainer({ onDashboardClick, onAddTaskClick }: uiSurfaceProps) {
 
     const {listOfTasks, onTaskClick, onTaskAdd} = useTasks();
 
@@ -15,6 +16,7 @@ export default function TaskContainer({ onDashboardClick }: uiSurfaceProps) {
             </ul>
         </div>
         <div>
+            <button className={basicContainerStyle} onClick={onAddTaskClick}>Add a Task</button>
             <button className={basicContainerStyle} onClick={onDashboardClick}>Return to Dashboard</button>
         </div>
         </>

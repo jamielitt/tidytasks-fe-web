@@ -1,20 +1,36 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { currentSelection } from "../../components/enums/uiSurface";
 
 export default function useUiSurface() {
     const [activeSurface, setActiveSurface] = useState<currentSelection>(currentSelection.DASHBOARD);
+    const lastSurface = useRef<currentSelection>(currentSelection.DASHBOARD);
     
-    const onDashboardClick = () => {
-        setActiveSurface(currentSelection.DASHBOARD);
+    function switchSurface(surface: currentSelection) {
+        lastSurface.current = activeSurface;
+        setActiveSurface(surface);
     }
 
-    const onTaskContainerClicked = () => {
-        setActiveSurface(currentSelection.TASK_CONTAINER);
+    const goBack = () => {
+        switchSurface(lastSurface.current);
+    }
+
+    const displayDashboard = () => {
+        switchSurface(currentSelection.DASHBOARD);
+    }
+
+    const displayTaskList = () => {
+        switchSurface(currentSelection.TASK_CONTAINER);
+    }
+
+    const displayAddTask = () => {
+        switchSurface(currentSelection.ADD_TASK);
     }
 
     return{
         activeSurface,
-        onDashboardClick,
-        onTaskContainerClicked,
+        displayDashboard,
+        displayTaskList,
+        displayAddTask,
+        goBack,
     };
 }
